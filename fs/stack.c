@@ -21,7 +21,7 @@
  */
 void fsstack_copy_inode_size(struct inode *dst, const struct inode *src)
 {
-	i_size_write(dst, i_size_read((struct inode *)src));
+	i_size_write(dst, i_size_read(src));
 	dst->i_blocks = src->i_blocks;
 }
 EXPORT_SYMBOL_GPL(fsstack_copy_inode_size);
